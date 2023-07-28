@@ -2,6 +2,7 @@
 #include <cmath>
 using namespace std;
 
+
 int main() {
     int lng;
     int ans = 0;
@@ -17,6 +18,6 @@ int main() {
    for (int k = 0; k < lng; k++) {
        ans += arr[k] * pow(31, k);
    }
-    cout << ans;
-    return 0;
+    cout << ans%1234567891;
+
 }
