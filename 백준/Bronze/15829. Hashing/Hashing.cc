@@ -1,11 +1,13 @@
 #include <iostream>
 #include <cmath>
+#define M 1234567891
 using namespace std;
 
 
 int main() {
     int lng;
-    int ans = 0;
+    long long int ans = 0;
+    long long int r=1;
     string str;
     int arr[1000];
     cin >> lng;
@@ -16,8 +18,9 @@ int main() {
     }
 
    for (int k = 0; k < lng; k++) {
-       ans += arr[k] * pow(31, k);
+       ans += (arr[k] * r)%M;
+       r = (r*31)%M;
    }
-    cout << ans%1234567891;
+    cout << ans%M;
 
 }
