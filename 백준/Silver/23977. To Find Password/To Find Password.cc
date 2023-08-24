@@ -17,7 +17,7 @@ int main(){
     
     ele = arr[0];
     result=0;
-    for (int i=0; i<n; i++){
+    for (int i=1; i<n; i++){
         result = (ele*arr[i])/gcd(ele, arr[i]); // 최소 공배수 
         ele = result;
     }
