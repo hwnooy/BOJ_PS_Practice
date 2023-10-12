@@ -2,19 +2,19 @@
 using namespace std;
 
 typedef long long int ll;
-int k, n;
+int a, n;
 int arr[10005];
 
 bool solve(ll x){
     ll cur = 0;
-    for (int i=0; i<k; i++) cur += arr[i]/x;
+    for (int i=0; i<a; i++) cur += arr[i]/x;
     return cur>=n;
 }
 int main(){
     ios::sync_with_stdio(0); cin.tie(0);
-    cin >> k >> n;
+    cin >> a >> n;
     
-    for (int i=0; i<k; i++) cin >> arr[i];
+    for (int i=0; i<a; i++) cin >> arr[i];
     ll left = 1;
     ll right = 0x7fffffff;
     while(left<right){
