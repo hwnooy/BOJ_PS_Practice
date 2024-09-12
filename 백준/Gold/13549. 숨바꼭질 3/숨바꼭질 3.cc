@@ -5,10 +5,9 @@ int sbin, bro;
 bool check[100001]; 
 
 int bfs() {
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq; // 우선순위 큐 (시간, 위치)
-
-    // 시작 위치 체크
-    fill(check, check + 100001, false); 
+    priority_queue<pair<int, int>, 
+    vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    
     check[sbin] = true;
     pq.push({ 0, sbin });  
 
@@ -45,7 +44,5 @@ int main() {
     cin.tie(0); cout.tie(0);
     cin >> sbin >> bro;
     cout << bfs();
-    
-
     return 0;
 }
